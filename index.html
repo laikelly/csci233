@@ -1,10 +1,83 @@
+<!-- Melinda Chen Login/Signup html-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<!DOCTYPE html>
 <head>
-  <meta charset="UTF-8">
-  <title>title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charser="UTF-8">
+    <title>Login / Sign Up</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="./signup/main.css"> <!-- link css stylesheet-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <div class="container">
+<!-- login form -->
+        <form action="" class="form" id="login">  
+            <h1 class="form-title">Login</h1>
+            <div class="form-message-error"></div> <!-- error msg-->
+            <div class="form-input-group">
+                <input type="text" class="form-input" autofocus placeholder="Username or Email">         
+                <div class="form-input-error-message"></div> <!-- error msg-->
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-input" autofocus placeholder="Password">
+                <div class="form-input-error-message"></div>
+            </div>
+            <button class="form-button" type="submit">
+              Login
+            </button>
+            <p class="form-text">
+              <a id="forgotpwlink" href="#" class="form-link">Forgot password?</a>
+            </p>
+            <p class="form-text">
+              <a id="signuplink" href="#" class="form-link">Don't have an account? Create account</a>
+            </p>
+        </form>
+<!-- sign up form-->
+        <form action="" class="form form-hidden" id="signup"> 
+          <h1 class="form-title">Sign Up</h1>
+          <div class="form-message-error"></div> <!-- error msg-->
+          <div class="form-input-group">
+              <input type="text" class="form-input" autofocus placeholder="Username">         
+              <div class="form-input-error-message"></div> <!-- error msg-->
+          </div>
+          <div class="form-input-group">
+            <input type="text" class="form-input" autofocus placeholder="Email Address">         
+            <div class="form-input-error-message"></div> <!-- error msg-->
+          </div>
+          <div class="form-group">
+              <input type="password" class="form-input" autofocus placeholder="Password">
+              <div class="form-input-error-message"></div>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-input" autofocus placeholder="Confirm Password">
+            <div class="form-input-error-message"></div>
+          </div>
+          <button class="form-button" type="submit">
+            Sign Up
+          </button>
+          <p class="form-text">
+            <a id="loginlink" href="#" class="form-link">Already have an account? Log In</a>
+          </p>
+        </form>
+<!-- forgot pasword -->
+        <form action="" class="form-hidden" id="forgotpw"> 
+          <h1 class="form-title">Forgot Password?</h1>
+          <div class="form-message-error"></div> <!-- error msg-->
+          <div class="form-input-group">
+            <input type="text" class="form-input" autofocus placeholder="Email Address">         
+            <div class="form-input-error-message"></div> <!-- error msg-->
+          </div>
+          <button class="form-button" type="submit">
+            Send
+          </button>
+          <p class="form-text">
+            <a id="backloginlink" href="#" class="form-link">Back to Login Page</a>
+          </p>
+    </div>
+    <script src="./signup/main.js"></script> <!-- link js file -->
 </body>
 </html>
