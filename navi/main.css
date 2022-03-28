@@ -1,0 +1,78 @@
+/*Melinda Chen Navigation Bar Css*/
+body {
+    --color-primary: #e0a5a5;
+    --color-primary-dark: #9c6868;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: var(--color-primary);
+}
+
+li, 
+a, 
+button1 {
+    display: inline;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+/* logo */
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+/*nav links*/
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li { /*targeting each list item in nav links*/
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    color:#9c6868;
+}
+
+button1 {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgb(56, 153, 243);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button1:hover {
+    background-color: rgba(87, 170, 248, 0.8);
+}
+
+.active { /*shows which page the user is on*/
+    background-color: #9c6868;
+}
+
+/* fixed navigation bar */
