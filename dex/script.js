@@ -1,3 +1,35 @@
+// $(function() {
+//   $("#pokemon-search").click(function() {
+//     let pokemonName = $("#pokemon-name").val()
+//
+//       if (pokemonName !== '') {
+//         $.getJSON(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`, function(data) {
+//           console.log('data: ', data)
+//           console.log('data: ', data.types[0].type.name)
+//           let pokemon = data
+//           const pokemonEl = document.createElement('div');
+//           pokemonEl.classList.add('pokemon');
+//           $('#poke_container').append(`<div class="img-container">
+//               <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${pokemon.name}" />
+//           </div>
+//           <div class="info">
+//               <span class="number">#${pokemon.id
+//   							.toString()
+//   							.padStart(3, '0')}</span>
+//               <h3 class="name">${pokemon.name}</h3>
+//               <small class="type">Type: <span>${pokemon.types[0].type.name}</span></small>
+//           </div>`)
+//
+//
+//         }).fail(function() {
+//           console.log("that pokemon doesn't exist")
+//       })
+//     }
+//     //reset the input
+//     $('#pokemon-name').val('')
+//   })
+// })
+
 const poke_container = document.getElementById('poke_container');
 const pokemons_number = 151;
 const colors = {
@@ -64,5 +96,6 @@ function createPokemonCard(pokemon) {
 
 	poke_container.appendChild(pokemonEl);
 }
+
 
 fetchPokemons();
