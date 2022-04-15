@@ -1,0 +1,107 @@
+/*Melinda Chen Account css*/
+.body {
+    background-color: aquamarine;
+}
+
+.acc-body {
+    --color-primary: #e0a5a5;
+    --color-primary-dark: #9c6868;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font: 200 1rem 'Poppins', Poppins;
+}
+
+.acc-setup {
+    text-align: center;
+    margin: auto;
+    position: center;
+    padding-bottom: 30px;
+}
+
+.favorites-button {
+    color:#ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgb(119, 96, 221);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.favorites-button:hover {
+    background-color: rgba(213, 183, 248, 0.8);
+}
+
+.Account-info {
+    font-family: 'Poppins', sans-serif;
+    font: 500 1rem 'Poppins', Poppins;
+    
+}
+
+.acc-top {
+    margin-left: 5em;
+    margin-right: 5em;
+    padding-top: 5px;
+    border: 7px solid rgb(197, 28, 28);
+    border-style:ridge;
+    background-color:rgb(197, 28, 28);
+}
+
+.acc-title {
+    font-family: 'Poppins', sans-serif;
+    font: 600 100rem 'Poppins', Poppins;
+    margin-left: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+}
+
+.acc-info {
+    margin-left: 5em;
+    margin-right: 5em;
+    padding-bottom: 30px;
+    border: 7px solid rgb(255, 255, 255);
+    border-style:ridge;
+    background-color:rgb(255, 255, 255);
+}
+
+.display-name {
+    margin-left: 40px;
+    float:inline-start;
+}
+
+.acc-text {
+    float:none;
+    margin-left: 40px;
+    display: block;
+    width: 35%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 2px solid #dac6c6;
+    outline: none;
+    background:#f2f3ff;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.acc-favorites-title {
+    margin-left: 5em;
+    margin-right: 5em;
+    padding-top: 5px;
+    border: 7px solid rgb(197, 28, 28);
+    border-style:ridge;
+    background-color:rgb(197, 28, 28);
+}
+
+.acc-favorites {
+    margin-left: 5em;
+    margin-right: 5em;
+    padding-bottom: 30px;
+    border: 7px solid rgb(255, 255, 255);
+    border-style:ridge;
+    background-color:rgb(255, 255, 255);
+}
