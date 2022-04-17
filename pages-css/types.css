@@ -1,0 +1,115 @@
+/*Melinda Chen Types*/
+.types-button {
+    display: flex;
+    justify-content: center;
+
+}
+.grass{
+    background-color:rgb(77, 219, 89);
+}
+
+.water {
+    background-color: rgb(127, 193, 255);
+}
+
+.fire {
+    background-color: rgb(240, 129, 64);
+}
+
+.bug {
+    background-color:rgb(29, 134, 52);
+}
+
+.normal {
+    background-color: gray;
+}
+
+.electric {
+    color: black;
+    background-color: rgb(255, 255, 0);
+}
+
+.poison {
+    background-color: purple;
+}
+
+.grass-sec {
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: 4em;
+    padding-top: 5px;
+    border: 7px solid rgb(77, 219, 89);
+    border-style:ridge;
+    background-color:rgb(77, 219, 89);
+}
+
+.types-title {
+    font-family: 'Poppins', sans-serif;
+    font: 600 100rem 'Poppins', Poppins;
+    margin-left: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+.type-info {
+    padding-bottom: 30px;
+    border: 7px solid rgb(255, 255, 255);
+    border-style:ridge;
+    background-color:rgb(255, 255, 255);
+}
+
+.water-sec {
+    margin-left: 5em;
+    margin-right: 5em;
+    border: 7px solid rgb(127, 193, 255);
+    border-style: ridge;
+    background-color:rgb(127, 193, 255);
+}
+
+.fire-sec {
+    margin-left: 5em;
+    margin-right: 5em;
+    border: 7px solid rgb(240, 129, 64);
+    border-style: ridge;
+    background-color:rgb(240, 129, 64);
+}
+
+.bug-sec {
+    margin-left: 5em;
+    margin-right: 5em;
+    border: 7px solid rgb(29, 134, 52);
+    border-style: ridge;
+    background-color:rgb(29, 134, 52);
+}
+
+.normal-sec {
+    margin-left: 5em;
+    margin-right: 5em;
+    border: 7px solid gray;
+    border-style: ridge;
+    background-color:gray;
+}
+
+.electric-sec {
+    margin-left: 5em;
+    margin-right: 5em;
+    border: 7px solid rgb(255, 255, 0);
+    border-style: ridge;
+    background-color: rgb(255, 255, 0);
+}
+
+.types-title-ele {
+    font-family: 'Poppins', sans-serif;
+    font: 600 100rem 'Poppins', Poppins;
+    margin-left: 40px;
+    font-size: 30px;
+    color: black;
+}
+
+.poison-sec {
+    margin-left: 5em;
+    margin-right: 5em;
+    border: 7px solid purple;
+    border-style: ridge;
+    background-color:purple;
+}

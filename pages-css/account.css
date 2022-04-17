@@ -1,11 +1,7 @@
 /*Melinda Chen Account css*/
-.body {
-    background-color: aquamarine;
-}
-
 .acc-body {
     --color-primary: #e0a5a5;
-    --color-primary-dark: #9c6868;
+    --color-primary-dark: #b63232;
 
     box-sizing: border-box;
     margin: 0;
