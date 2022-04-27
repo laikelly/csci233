@@ -84,9 +84,12 @@ function createPokemonCard(pokemon){
 
 	pokemonEl.style.backgroundColor = color;
 
+// <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${name}"/>
+// <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${name}" />
+
     const pokeInnerHTML = `
         <div class="img-container">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${name}" />
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${name}"/>
         </div>
         <div class="info">
             <span class="number">#${pokemon.id
