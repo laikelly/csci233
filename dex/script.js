@@ -1,37 +1,45 @@
-// $(function() {
-//   $("#pokemon-search").click(function() {
-//     let pokemonName = $("#pokemon-name").val()
-//
-//       if (pokemonName !== '') {
-//         $.getJSON(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`, function(data) {
-//           console.log('data: ', data)
-//           console.log('data: ', data.types[0].type.name)
-//           let pokemon = data
-//           const pokemonEl = document.createElement('div');
-//           pokemonEl.classList.add('pokemon');
-//           $('#poke_container').append(`<div class="img-container">
-//               <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${pokemon.name}" />
-//           </div>
-//           <div class="info">
-//               <span class="number">#${pokemon.id
-//   							.toString()
-//   							.padStart(3, '0')}</span>
-//               <h3 class="name">${pokemon.name}</h3>
-//               <small class="type">Type: <span>${pokemon.types[0].type.name}</span></small>
-//           </div>`)
-//
-//
-//         }).fail(function() {
-//           console.log("that pokemon doesn't exist")
-//       })
-//     }
-//     //reset the input
-//     $('#pokemon-name').val('')
-//   })
-// })
-
 const poke_container = document.getElementById('poke_container');
+let pokemons = [];
+// const url = "https://pokeapi.co/api/v2/pokemon";
 const pokemons_number = 151;
+const search = document.getElementById("search");
+const form = document.getElementById("form")
+
+const fetchPokemons = async () => {
+    for (let i = 1; i <= pokemons_number; i++){
+        await getAllPokemon(i);
+    }
+    pokemons.forEach((pokemon) => createPokemonCard(pokemon));
+
+};
+
+const removePokemon = () =>{
+    const pokemonEls = document.getElementsByClassName("pokemon");
+    let removablePokemons = [];
+    for (let i = 0; i < pokemonEls.length; i++){
+        const pokemonEl = pokemonEls[i];
+        removablePokemons = [...removablePokemons, pokemonEl];
+    }
+    removablePokemons.forEach((remPoke) => remPoke.remove());
+
+}
+
+const getPokemon = async id => {
+    const searchPokemons = pokemons.filter((poke) => poke.name === id);
+    removePokemon();
+    searchPokemons.forEach((pokemon) => createPokemonCard(pokemon));
+
+}
+
+const getAllPokemon = async id => {
+    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+    const res = await fetch(url);
+    const pokemon = await res.json();
+    pokemons = [...pokemons,pokemon];
+};
+
+fetchPokemons();
+
 const colors = {
   bug: '#007524',
   dark: '#3D3D39',
@@ -55,31 +63,28 @@ const colors = {
 
 const main_types = Object.keys(colors);
 
-const fetchPokemons = async () => {
-	for (let i = 1; i <= pokemons_number; i++) {
-		await getPokemon(i);
-	}
-};
-
-const getPokemon = async id => {
-	const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-	const res = await fetch(url);
-	const pokemon = await res.json();
-	createPokemonCard(pokemon);
-};
-
-function createPokemonCard(pokemon) {
-	const pokemonEl = document.createElement('div');
-	pokemonEl.classList.add('pokemon');
-
-	const poke_types = pokemon.types.map(type => type.type.name);
-	const type = main_types.find(type => poke_types.indexOf(type) > -1);
+function createPokemonCard(pokemon){
+    const pokemonEl = document.createElement('div');
+    pokemonEl.classList.add('pokemon');
+    const poke_types = pokemon.types.map((el) => el.type.name).slice(0, 1);
+	const type = main_types.find((el) => poke_types.indexOf(el) > -1);
 	const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+    const poke_stat = pokemon.stats.map((el) => el.stat.name);
+    const stats = poke_stat.slice(0, 3);
+    const base_value = pokemon.stats.map((el) => el.base_stat);
+    const base_stat = base_value.slice(0, 3);
+    const stat = stats.map((stat) => {
+        return `<li class="names">${stat}</li>`;
+
+    }).join("");
+    const base = base_stat.map((base) => {
+        return `<li class="base">${base}</li>`
+    }).join("");
 	const color = colors[type];
 
 	pokemonEl.style.backgroundColor = color;
 
-	const pokeInnerHTML = `
+    const pokeInnerHTML = `
         <div class="img-container">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${name}" />
         </div>
@@ -90,12 +95,29 @@ function createPokemonCard(pokemon) {
             <h3 class="name">${name}</h3>
             <small class="type">Type: <span>${type}</span></small>
         </div>
-    `;
+        <div class="stats">
+        <h2>Stats</h2>
+        <div class = "flex">
+        <ul>${stat}</ul>
+        <ul>${base}</ul>
+        </div>
+        </div>`;
+        pokemonEl.innerHTML = pokeInnerHTML;
 
-	pokemonEl.innerHTML = pokeInnerHTML;
-
-	poke_container.appendChild(pokemonEl);
-}
+    	poke_container.appendChild(pokemonEl);
 
 
-fetchPokemons();
+};
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const searchItem = search.value;
+    if (searchItem){
+        getPokemon(searchItem);
+        search.value = "";
+    } else if (searchItem == ""){
+        pokemons = [];
+        removePokemon();
+        fetchPokemons();
+    }
+});
