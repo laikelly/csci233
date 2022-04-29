@@ -22,6 +22,10 @@ body {
     background: url(./pokebg.png);
     background-size: cover;
     /*background-repeat: no-repeat;*/
+
+   
+    
+
 }
 
 .container { /*targeting the container*/
@@ -34,7 +38,6 @@ body {
     background: #ffffff;
     
 }
-
 .container,
 .form-input,
 .form-button { /* font */
