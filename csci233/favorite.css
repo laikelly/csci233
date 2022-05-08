@@ -18,6 +18,10 @@ body {
   display: none;
 }
 
+#checkbox:checked + label svg {
+  
+}
+
 svg {
   cursor: pointer;
   overflow: visible;
