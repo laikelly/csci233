@@ -1,20 +1,36 @@
 /*Melinda Chen Types*/
 .types-body {
     width: 100%;
-    border: 20px solid #e0a5a5;
+    border: 20px solid #B7EFF1;
     border-style:ridge;
-    background-color:#e0a5a5;
+    background-color:#B7EFF1;
 }
 
+a.buttons {
+    display: inline-block;
+    text-align: center;
+    padding:0.9em 0.3em;
+    margin:0 0.1em 0.1em 0;
 
+}
 
 .types-button {
-    position: relative;
+    text-align: center;
     margin-left: 4em;
     margin-right: 4em;
 }
 
+@media all and (max-width:30em){
+    a.types.button{
+    display:block;
+    margin:0.2em auto;
+}
+}
+
+
 .types-button2 {
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
     align-items: center;
     margin-top: 30px;

@@ -202,11 +202,13 @@ h2 {
 }
 
 .nav-links li { /*targeting each list item in nav links*/
+   
     display: inline-block;
     padding: 0px 20px;
 }
 
-.nav-links li a {
+.nav-links li a { 
+    color: black;
     justify-content: right;
     transition: all 0.3s ease 0s;
 }

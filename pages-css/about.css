@@ -1,0 +1,18 @@
+.hi {
+    font-family: 'Poppins';
+}
+
+.info {
+    font-family: 'Poppins';
+    font-size: 24px;
+}
+
+.aboutmsg {
+    margin: 4em;
+}
+
+.links {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(65, 77, 245);
+}
