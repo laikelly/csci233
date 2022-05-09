@@ -99,7 +99,7 @@ function createPokemonCard(pokemon){
             <small class="type">Type: <span>${type}</span></small>
         </div>
         <div class="stats">
-        <h2>Stats</h2>
+        <h1>Stats</h1>
         <div class = "flex">
         <ul>${stat}</ul>
         <ul>${base}</ul>

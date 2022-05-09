@@ -5,10 +5,10 @@
 	box-sizing: border-box;
 }
 
-body {
-	background: #EFEFBB;
+div.pokedex {
+	/* background: #EFEFBB;
 	background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
-	background: linear-gradient(to right, #D4D3DD, #EFEFBB);
+	background: linear-gradient(to right, #D4D3DD, #EFEFBB); */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -17,7 +17,7 @@ body {
 	margin: 0;
 }
 
-h1 {
+#pokedex h1 {
 	letter-spacing: 3px;
 }
 
@@ -102,12 +102,12 @@ h1 {
 	justify-content: space-around;
 	font-size: 1.3rem;
 }
-.flex > ul{
+.flex >  ul{
 	list-style: none;
 	padding: 0;
 	text-align: left;
 }
-.flex > ul > li::first-letter{
+.flex >  ul >  li::first-letter{
 	text-transform: uppercase;
 }
 .search{
