@@ -14,12 +14,8 @@ body {
   text-align: center;
 }
 
-#checkbox {
+#checkbox, #checkbox2 {
   display: none;
-}
-
-#checkbox:checked + label svg {
-  
 }
 
 svg {
@@ -28,7 +24,7 @@ svg {
   width: 60px;
 }
 
-#heart {
+.heart {
   transform-origin: center;
   animation: animateHeartOut .3s linear forwards;
   transform: scale(.2);
@@ -36,132 +32,132 @@ svg {
   animation: animateHeart .3s linear forwards .25s;
 }
 
-#main-circ {
+.main-circ {
   transform-origin: 29.5px 29.5px;
   animation: animateCircle .3s linear forwards;
   opacity: 1;
 }
 
-#grp1 {
+.grp1 {
   opacity: 1;
   transition: .1s all .3s;
 }
 
-#oval1-1 {
+.oval1-1 {
   transform: scale(0) translate(0, -30px);
   transform-origin: 0 0 0;
   transition: .5s transform .3s;
 }
 
-#oval2-1 {
+.oval2-1 {
   transform: scale(0) translate(10px, -50px);
   transform-origin: 0 0 0;
   transition: 1.5s transform .3s;
 }
 
-#grp2 {
+.grp2 {
   opacity: 1;
   transition: .1s all .3s;
   transition: .1s opacity .3s;
 }
 
-#oval1-2 {
+.oval1-2 {
   transform: scale(0) translate(30px, -15px);
   transform-origin: 0 0 0;
   transition: .5s transform .3s;
 }
 
-#oval2-2 {
+.oval2-2 {
   transform: scale(0) translate(60px, -15px);
   transform-origin: 0 0 0;
   transition: 1.5s transform .3s;
 }
 
-#grp3 {
+.grp3 {
   opacity: 1;
   transition: .1s all .3s;
   transition: .1s opacity .3s;
 }
 
-#oval1-3 {
+.oval1-3 {
   transform: scale(0) translate(30px, 0px);
   transform-origin: 0 0 0;
   transition: .5s transform .3s;
 }
 
-#oval2-3 {
+.oval2-3 {
   transform: scale(0) translate(60px, 10px);
   transform-origin: 0 0 0;
   transition: 1.5s transform .3s;
 }
 
-#grp4 {
+.grp4 {
   opacity: 1;
   transition: .1s all .3s;
   transition: .1s opacity .3s;
 }
 
-#oval1-4 {
+.oval1-4 {
   transform: scale(0) translate(30px, 15px);
   transform-origin: 0 0 0;
   transition: .5s transform .3s;
 }
 
-#oval2-4 {
+.oval2-4 {
   transform: scale(0) translate(40px, 50px);
   transform-origin: 0 0 0;
   transition: 1.5s transform .3s;
 }
 
-#grp5 {
+.grp5 {
   opacity: 1;
   transition: .1s all .3s;
   transition: .1s opacity .3s;
 }
 
-#oval1-5 {
+.oval1-5 {
   transform: scale(0) translate(-10px, 20px);
   transform-origin: 0 0 0;
   transition: .5s transform .3s;
 }
 
-#oval2-5 {
+.oval2-5 {
   transform: scale(0) translate(-60px, 30px);
   transform-origin: 0 0 0;
   transition: 1.5s transform .3s;
 }
 
-#grp6 {
+.grp6 {
   opacity: 1;
   transition: .1s all .3s;
   transition: .1s opacity .3s;
 }
 
-#oval1-6 {
+.oval1-6 {
   transform: scale(0) translate(-30px, 0px);
   transform-origin: 0 0 0;
   transition: .5s transform .3s;
 }
 
-#oval2-6 {
+.oval2-6 {
   transform: scale(0) translate(-60px, -5px);
   transform-origin: 0 0 0;
   transition: 1.5s transform .3s;
 }
 
-#grp7 {
+.grp7 {
   opacity: 1;
   transition: .1s all .3s;
   transition: .1s opacity .3s;
 }
 
-#oval1-7 {
+.oval1-7 {
   transform: scale(0) translate(-30px, -15px);
   transform-origin: 0 0 0;
   transition: .5s transform .3s;
 }
 
-#oval2-7 {
+.oval2-7 {
   transform: scale(0) translate(-55px, -30px);
   transform-origin: 0 0 0;
   transition: 1.5s transform .3s;
