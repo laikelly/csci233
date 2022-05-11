@@ -1,6 +1,5 @@
 const poke_container = document.getElementById('poke_container');
 let pokemons = [];
-// const url = "https://pokeapi.co/api/v2/pokemon";
 const pokemons_number = 151;
 const search = document.getElementById("search");
 const form = document.getElementById("form")
@@ -92,9 +91,6 @@ function createPokemonCard(pokemon){
 
 	pokemonEl.style.backgroundColor = color;
 
-// <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${name}"/>
-// <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${name}" />
-
     const pokeInnerHTML = `
         <div class="img-container">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${name}"/>
@@ -111,6 +107,7 @@ function createPokemonCard(pokemon){
         <div class = "flex">
         <ul>${stat}</ul>
         <ul>${base}</ul>
+
         </div>
         </div>`;
         pokemonEl.innerHTML = pokeInnerHTML;
@@ -123,11 +120,14 @@ function createPokemonCard(pokemon){
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const searchItem = search.value;
-    if (searchItem){
-        getPokemon(searchItem);
+    if (searchItem == "bug" || searchItem == "dark" || searchItem == "dragon" || searchItem == "electric" || searchItem == "fairy" || searchItem == "fighting" ||searchItem == "fire" ||searchItem == "flying" ||searchItem == "ghost" ||searchItem == "grass" ||searchItem == "ground" ||searchItem == "ice" ||searchItem == "normal" || searchItem == "poison" || searchItem == "psychic" || searchItem == "rock" || searchItem == "steel" ||searchItem =="water"){
         getPokeTypes(searchItem);
         search.value = "";
-    } else if (searchItem == ""){
+
+    }else if(searchItem)  {
+        getPokemon(searchItem);
+        search.value = "";
+    }else if (searchItem == ""){
         pokemons = [];
         removePokemon();
         fetchPokemons();

@@ -1,8 +1,7 @@
+const poke_container = document.getElementById('poke_container');
 let pokemons = [];
 // const url = "https://pokeapi.co/api/v2/pokemon";
 const pokemons_number = 151;
-
-
 const fetchPokemons = async () => {
     for (let i = 1; i <= pokemons_number; i++){
         await getAllPokemon(i);
@@ -90,6 +89,9 @@ function createPokemonCard(pokemon){
 
 	pokemonEl.style.backgroundColor = color;
 
+// <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${name}"/>
+// <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${name}" />
+
     const pokeInnerHTML = `
         <div class="img-container">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${name}"/>
@@ -111,5 +113,10 @@ function createPokemonCard(pokemon){
         pokemonEl.innerHTML = pokeInnerHTML;
 
     	poke_container.appendChild(pokemonEl);
+
+
 };
-// document.getElementById('grass').innerHTML = getPokeTypes(""searchItem"");
+document.addEventListener("DOMContentLoaded", (e) => {
+    e.preventDefault();
+    document.getElementById("grass").appendChild(getPokeTypes("grass")) ;
+});
