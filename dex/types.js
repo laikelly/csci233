@@ -1,9 +1,7 @@
-const poke_container = document.getElementById('poke_container');
 let pokemons = [];
 // const url = "https://pokeapi.co/api/v2/pokemon";
 const pokemons_number = 151;
-const search = document.getElementById("search");
-const form = document.getElementById("form")
+
 
 const fetchPokemons = async () => {
     for (let i = 1; i <= pokemons_number; i++){
@@ -92,9 +90,6 @@ function createPokemonCard(pokemon){
 
 	pokemonEl.style.backgroundColor = color;
 
-// <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${name}"/>
-// <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png" alt="${name}" />
-
     const pokeInnerHTML = `
         <div class="img-container">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" alt="${name}"/>
@@ -116,20 +111,5 @@ function createPokemonCard(pokemon){
         pokemonEl.innerHTML = pokeInnerHTML;
 
     	poke_container.appendChild(pokemonEl);
-
-
 };
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const searchItem = search.value;
-    if (searchItem){
-        getPokemon(searchItem);
-        getPokeTypes(searchItem);
-        search.value = "";
-    } else if (searchItem == ""){
-        pokemons = [];
-        removePokemon();
-        fetchPokemons();
-    }
-});
+// document.getElementById('grass').innerHTML = getPokeTypes(""searchItem"");

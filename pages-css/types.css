@@ -1,8 +1,8 @@
 /*Melinda Chen Types*/
 .types-body {
     width: 100%;
-    border: 20px solid #B7EFF1;
-    border-style:ridge;
+    /* border: 20px solid #B7EFF1;
+    border-style:ridge; */
     background-color:#B7EFF1;
 }
 
@@ -236,7 +236,7 @@ a.buttons {
 }
 
 .ice {
-    
+
     background-color: #40E0D0;
 }
 
@@ -283,7 +283,3 @@ a.buttons {
     border-style: ridge;
     background-color:#6B6B6B;
 }
-
-
-
-
