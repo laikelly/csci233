@@ -124,7 +124,7 @@ form.addEventListener("submit", (e) => {
         getPokeTypes(searchItem);
         search.value = "";
 
-    if(searchItem)  {
+    }else if(searchItem)  {
         getPokemon(searchItem);
         search.value = "";
     }else if (searchItem == ""){
