@@ -120,9 +120,9 @@ function createPokemonCard(pokemon){
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const searchItem = search.value;
-    // if (searchItem == "bug" || searchItem == "dark" || searchItem == "dragon" || searchItem == "electric" || searchItem == "fairy" || searchItem == "fighting" ||searchItem == "fire" ||searchItem == "flying" ||searchItem == "ghost" ||searchItem == "grass" ||searchItem == "ground" ||searchItem == "ice" ||searchItem == "normal" || searchItem == "poison" || searchItem == "psychic" || searchItem == "rock" || searchItem == "steel" ||searchItem =="water"){
-    //     getPokeTypes(searchItem);
-    //     search.value = "";
+    if (searchItem == "bug" || searchItem == "dark" || searchItem == "dragon" || searchItem == "electric" || searchItem == "fairy" || searchItem == "fighting" ||searchItem == "fire" ||searchItem == "flying" ||searchItem == "ghost" ||searchItem == "grass" ||searchItem == "ground" ||searchItem == "ice" ||searchItem == "normal" || searchItem == "poison" || searchItem == "psychic" || searchItem == "rock" || searchItem == "steel" ||searchItem =="water"){
+        getPokeTypes(searchItem);
+        search.value = "";
 
     if(searchItem)  {
         getPokemon(searchItem);
